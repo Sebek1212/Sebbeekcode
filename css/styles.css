@@ -1,0 +1,50 @@
+/* styles.css — podstawowy, responsywny styl dla Sebbeekcode */
+:root{
+  --bg:#0f1724; /* dark navy */
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#06b6d4; /* teal */
+  --text:#e6eef6;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg) 0%, #071025 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1.25rem;
+}
+.site-header{background:transparent;padding:0.5rem 0}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.logo img{display:block}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+.main-nav a:hover{color:var(--text)}
+.hero{padding:4rem 0;text-align:left}
+.hero h1{font-size:2.1rem;margin:0 0 .5rem}
+.hero p{margin:0 0 1rem;color:var(--muted);line-height:1.6}
+.btn{display:inline-block;padding:.6rem 1rem;background:var(--accent);color:#012;text-decoration:none;border-radius:8px;font-weight:600}
+.projects{padding:2rem 0}
+.projects h2, .about h2, .contact h2{margin-top:0}
+.projects p{color:var(--muted)}
+.site-footer{padding:1rem 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
+
+/* layout for project cards (placeholder) */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:10px}
+.card h3{margin:.25rem 0;color:var(--text)}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* responsive tweaks */
+@media (max-width:700px){
+  .site-header .container{padding:0 0.5rem}
+  .hero{padding:2.5rem 0;text-align:center}
+  .main-nav{display:none}
+  .hero h1{font-size:1.6rem}
+}
